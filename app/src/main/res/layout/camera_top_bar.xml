@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:background="#ff333333">
+
+    <com.dw.bcamera.widget.RotateImageView
+        android:id="@+id/topLeftIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:scaleType="center"
+        android:src="@drawable/cm_cancel"/>
+
+    <com.dw.bcamera.widget.RotateImageView
+        android:id="@+id/topRightIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:scaleType="center"
+        android:src="@drawable/cm_switch_camera"/>
+
+    <com.dw.bcamera.widget.RotateImageView
+        android:id="@+id/topRightGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/topRightIndicator"
+        android:contentDescription="@null"
+        android:scaleType="center"
+        android:src="@drawable/cm_grid"/>
+
+    <com.dw.bcamera.widget.RotateTextView
+        android:id="@+id/topCenterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="60'"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:visibility="invisible"/>
+</merge>

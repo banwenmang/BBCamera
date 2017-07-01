@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/edit_bg_color">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/bcamera_title_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingBottom="10.0dip"
+        android:paddingTop="10.0dip">
+
+        <Button
+            android:id="@+id/btnCrop"
+            style="@style/photo_edit_bottom_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20.0dip"
+            android:drawablePadding="4.0dip"
+            android:drawableTop="@drawable/photo_edit_crop"
+            android:text="@string/edit_crop"/>
+
+        <Button
+            android:id="@+id/btnAuto"
+            style="@style/photo_edit_bottom_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="4.0dip"
+            android:drawableTop="@drawable/photo_edit_auto"
+            android:text="@string/edit_auto_adjust"/>
+
+        <Button
+            android:id="@+id/btnRotate"
+            style="@style/photo_edit_bottom_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20.0dip"
+            android:drawablePadding="4.0dip"
+            android:drawableTop="@drawable/photo_edit_rotate"
+            android:text="@string/edit_rotate"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/toolContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:layout_above="@+id/bottomBar">
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:background="@drawable/btn_photo_edit_crop_reset"
+            android:text="@string/edit_reset"
+            android:textColor="@color/photo_edit_reset_textcolor"
+            android:textSize="13.0sp"/>
+
+        <RelativeLayout
+            android:id="@+id/cropToolItemBar"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/btn_reset"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/edit_crop_ratio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:background="@drawable/btn_photo_edit_crop_ratio"
+                android:gravity="center"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:text="@string/edit_ratio"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/edit_crop_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20.0dip"
+                android:background="@drawable/bg_btn_photo_edit_crop_confirm"
+                android:drawableLeft="@drawable/ic_photo_edit_crop_btn"
+                android:gravity="center"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:text="@string/edit_confirm"
+                android:textColor="@color/photo_edit_crop_confirm_textcolor"/>
+        </RelativeLayout>
+
+        <SeekBar
+            android:id="@+id/autoSeekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btn_reset"
+            android:indeterminate="false"
+            android:maxHeight="2.0dip"
+            android:minHeight="2.0dip"
+            android:paddingLeft="20.0dip"
+            android:paddingRight="20.0dip"
+            android:progressDrawable="@drawable/photo_edit_seekbar_progress"
+            android:thumb="@drawable/photo_edit_seekbar_thumb"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnRotate90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20.0dip"
+            android:background="@drawable/bg_btn_photo_edit_crop_confirm"
+            android:drawableLeft="@drawable/photo_edit_rotate_n"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:text="@string/edit_rotate_degress"
+            android:textColor="@android:color/white"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/toolContainer"
+        android:layout_below="@+id/title_bar"
+        android:paddingLeft="20.0dip"
+        android:paddingRight="20.0dip">
+
+        <com.dw.bcamera.photoedit.CropImageView
+            android:id="@+id/image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"/>
+    </RelativeLayout>
+
+    <com.dw.bcamera.widget.HorizontalListView
+        android:id="@+id/cropToolRatioBar"
+        android:layout_width="fill_parent"
+        android:layout_height="80.0dip"
+        android:layout_above="@+id/toolContainer"
+        android:background="@color/black_color"
+        android:choiceMode="singleChoice"
+        android:paddingTop="20.0dip"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/loadAnimView"
+        layout="@layout/photo_edit_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

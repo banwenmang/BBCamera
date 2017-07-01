@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/beauty_divider_color">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/bao_bcamera_title_bar"/>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/beauty_divider_color"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent">
+
+            <com.dw.bcamera.widget.HorizontalListView
+                android:id="@+id/hlv_filter"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:scrollbars="none"
+                android:visibility="gone"/>
+
+            <com.dw.bcamera.widget.HorizontalListView
+                android:id="@+id/hlv_heart"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:scrollbars="none"
+                android:visibility="gone"/>
+
+            <com.dw.bcamera.widget.HorizontalListView
+                android:id="@+id/hlv_frame"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:scrollbars="none"
+                android:visibility="gone"/>
+
+            <include
+                android:id="@+id/rl_seekbar"
+                layout="@layout/bao_seekbar_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"/>
+
+            <include
+                android:id="@+id/rl_crop_ratio"
+                layout="@layout/bao_crop_ratio_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"/>
+
+            <include
+                android:id="@+id/rl_rotate"
+                layout="@layout/bao_rotate_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"/>
+
+            <include
+                android:id="@+id/rl_mosaic"
+                layout="@layout/bao_mosaic_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"/>
+
+            <com.dw.bcamera.widget.HorizontalListView
+                android:id="@+id/hlv_edit_item"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:scrollbars="none"
+                android:visibility="gone"/>
+
+            <include
+                android:id="@+id/beauty_item_view"
+                layout="@layout/beauty_item_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/effect_tab_bg">
+
+            <include
+                android:id="@+id/rl_seekbar_des"
+                layout="@layout/bao_seekbar_des_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+
+            <include
+                android:id="@+id/rl_crop_rotate_choice"
+                layout="@layout/crop_rotate_choice_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone"/>
+
+            <include
+                android:id="@+id/ll_bottom_btn"
+                layout="@layout/bao_bottom_btn_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/displayContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_below="@+id/title_bar"
+        android:background="@color/beauty_divider_color">
+
+        <TextureView
+            android:id="@+id/renderView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/shadowView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/crop_image_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/beauty_divider_color">
+
+            <ImageView
+                android:id="@+id/crop_image"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"/>
+        </RelativeLayout>
+
+        <com.dw.bcamera.photoeffect.CropView
+            android:id="@+id/crop_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"/>
+
+        <com.dw.bcamera.widget.TextContainerLayout
+            android:id="@+id/layout_text_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@+id/renderView"
+            android:layout_alignLeft="@+id/renderView"
+            android:layout_alignRight="@+id/renderView"
+            android:layout_alignTop="@+id/renderView"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/compare_image_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/beauty_divider_color"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/compare_image"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:contentDescription="compare_image_cd"
+                android:scaleType="fitCenter"/>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/panZoomTip"
+            layout="@layout/frame_panzoom_tips_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/loadAnimView"
+            layout="@layout/photo_edit_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <com.dw.bcamera.widget.RadialGradientView
+            android:id="@+id/focusView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@+id/renderView"
+            android:layout_alignLeft="@+id/renderView"
+            android:layout_alignRight="@+id/renderView"
+            android:layout_alignTop="@+id/renderView"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/bling_cover"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:contentDescription="bling_cover_cd"
+            android:scaleType="fitXY"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/effect_compare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:contentDescription="effect_compare_cd"
+        android:src="@drawable/photo_effect_compare"/>
+</RelativeLayout>

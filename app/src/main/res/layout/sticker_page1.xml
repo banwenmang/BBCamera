@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/iv_tag"
+        android:layout_width="150.0dip"
+        android:layout_height="150.0dip"
+        android:background="@color/transparent"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:src="@mipmap/ic_launcher"/>
+
+    <ImageView
+        android:id="@+id/iv_delete_tag"
+        android:layout_width="@dimen/sticker_ctrl_size"
+        android:layout_height="@dimen/sticker_ctrl_size"
+        android:background="@color/transparent"
+        android:contentDescription="@null"
+        android:src="@drawable/ed_delete_tag"/>
+
+    <ImageView
+        android:id="@+id/iv_flip_tag"
+        android:layout_width="@dimen/sticker_ctrl_size"
+        android:layout_height="@dimen/sticker_ctrl_size"
+        android:background="@color/transparent"
+        android:contentDescription="@null"/>
+
+    <ImageView
+        android:id="@+id/iv_zoom_tag"
+        android:layout_width="@dimen/sticker_ctrl_size"
+        android:layout_height="@dimen/sticker_ctrl_size"
+        android:background="@color/transparent"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:src="@drawable/ed_zoom_tag"/>
+</merge>

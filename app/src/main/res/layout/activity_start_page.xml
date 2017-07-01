@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/main"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/startpage_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/startpage_bg"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/sp_logo"
+        android:layout_width="98.0dip"
+        android:layout_height="42.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90.0dip"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_startpage_logo"/>
+
+    <RelativeLayout
+        android:id="@+id/sp_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="160.0dip"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/sp_top_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/photo_icon"
+                android:layout_width="@dimen/startpage_btn_w_h"
+                android:layout_height="@dimen/startpage_btn_w_h"
+                android:background="@drawable/startpage_photo"
+                android:gravity="bottom|center"
+                android:paddingBottom="17.0dip"
+                android:text="@string/str_startpage_photo"
+                android:textColor="@color/black_color"/>
+
+            <TextView
+                android:id="@+id/video_icon"
+                android:layout_width="@dimen/startpage_btn_w_h"
+                android:layout_height="@dimen/startpage_btn_w_h"
+                android:layout_marginLeft="32.0dip"
+                android:background="@drawable/startpage_video"
+                android:gravity="bottom|center"
+                android:paddingBottom="17.0dip"
+                android:text="@string/str_startpage_video"
+                android:textColor="@color/black_color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sp_down_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sp_top_two"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/camera_icon"
+                android:layout_width="@dimen/startpage_btn_w_h"
+                android:layout_height="@dimen/startpage_btn_w_h"
+                android:background="@drawable/startpage_camera"
+                android:gravity="bottom|center"
+                android:paddingBottom="17.0dip"
+                android:text="@string/str_startpage_camera"
+                android:textColor="@color/black_color"/>
+
+            <TextView
+                android:id="@+id/puzzle_icon"
+                android:layout_width="@dimen/startpage_btn_w_h"
+                android:layout_height="@dimen/startpage_btn_w_h"
+                android:layout_marginLeft="32.0dip"
+                android:background="@drawable/startpage_puzzle"
+                android:gravity="bottom|center"
+                android:paddingBottom="17.0dip"
+                android:text="@string/str_photo_puzzle"
+                android:textColor="@color/black_color"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/sp_setting_button"
+        android:layout_width="32.0dip"
+        android:layout_height="32.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginTop="20.0dip"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_startpage_setting"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/iv_shoufa"
+        android:layout_width="187.0dip"
+        android:layout_height="30.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="46.0dip"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_shoufa_logo_huawei"
+        android:visibility="gone"/>
+</RelativeLayout>

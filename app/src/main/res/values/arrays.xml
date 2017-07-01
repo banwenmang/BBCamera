@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="edit">
+        <item>@string/str_crop_rotate</item>
+        <item>@string/str_brightness</item>
+        <item>@string/str_contrast</item>
+        <item>@string/str_saturation</item>
+        <item>@string/str_temperature</item>
+        <item>@string/str_mosaic</item>
+        <item>@string/str_virtual</item>
+    </string-array>
+    <array name="edit_res">
+        <item>@drawable/edit_item_crop</item>
+        <item>@drawable/edit_item_brightness</item>
+        <item>@drawable/edit_item_contrast</item>
+        <item>@drawable/edit_item_saturation</item>
+        <item>@drawable/edit_item_temperature</item>
+        <item>@drawable/edit_item_mosaic</item>
+        <item>@drawable/edit_item_virtual</item>
+    </array>
+    <string-array name="str_array_stickerSetDes">
+        <item>"照片也可以有声有色，动动手指，添加宝贝的心声！
+ (合作投稿：baopai@qbb6.com)"</item>
+        <item>"用便利贴记录珍贵的第一次，留存最美好记忆！
+ (合作投稿：baopai@qbb6.com)"</item>
+    </string-array>
+    <string-array name="str_array_stickerSetTitles">
+        <item>文字气泡</item>
+        <item>成长点滴</item>
+    </string-array>
+    <string-array name="edit_crop_ratios">
+        <item>自由</item>
+        <item>1:1</item>
+        <item>3:4</item>
+        <item>4:3</item>
+        <item>2:3</item>
+        <item>3:2</item>
+    </string-array>
+</resources>

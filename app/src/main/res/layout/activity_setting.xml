@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:id="@+id/camera_main"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@+id/st_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/title_bar"
+            layout="@layout/bao_bcamera_title_bar"/>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/ll_sv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    style="@style/setting_divider_style"
+                    android:contentDescription="@null"/>
+
+                <RelativeLayout
+                    android:id="@+id/st_beauty_voice"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:background="@drawable/st_alone">
+
+                    <TextView
+                        android:id="@+id/st_beauty_title"
+                        style="@style/setting_item_text"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/str_open_beauty_voice"
+                        android:textColor="@color/black_color"/>
+
+                    <include
+                        android:id="@+id/tg_beauty"
+                        layout="@layout/toggle_button"
+                        android:layout_width="@dimen/toggle_button_width"
+                        android:layout_height="@dimen/toggle_button_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"/>
+                </RelativeLayout>
+
+                <ImageView
+                    style="@style/setting_divider_style"
+                    android:contentDescription="@null"/>
+
+                <ImageView
+                    android:id="@+id/divide_iv"
+                    style="@style/setting_divider_style"
+                    android:contentDescription="@null"/>
+
+                <RelativeLayout
+                    android:id="@+id/st_recommend"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:background="@drawable/st_alone">
+
+                    <TextView
+                        android:id="@+id/st_recommend_title"
+                        style="@style/setting_item_text"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/recommend"
+                        android:textColor="@color/black_color"/>
+
+                    <ImageView
+                        android:id="@+id/st_recommend_arrow"
+                        style="@style/setting_item_arrow"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@null"/>
+                </RelativeLayout>
+
+                <ImageView
+                    style="@style/setting_divider_style_with_padding"
+                    android:contentDescription="@null"/>
+
+                <RelativeLayout
+                    android:id="@+id/st_feedback"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:background="@drawable/st_alone">
+
+                    <TextView
+                        android:id="@+id/st_feedback_title"
+                        style="@style/setting_item_text"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/feedback"
+                        android:textColor="@color/black_color"/>
+
+                    <ImageView
+                        android:id="@+id/st_feedback_arrow"
+                        style="@style/setting_item_arrow"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/st_arrow"/>
+                </RelativeLayout>
+
+                <ImageView
+                    style="@style/setting_divider_style_with_padding"
+                    android:contentDescription="@null"/>
+
+                <RelativeLayout
+                    android:id="@+id/st_about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:background="@drawable/st_alone">
+
+                    <TextView
+                        android:id="@+id/st_about_title"
+                        style="@style/setting_item_text"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/about"
+                        android:textColor="@color/black_color"/>
+
+                    <ImageView
+                        android:id="@+id/st_about_arrow"
+                        style="@style/setting_item_arrow"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/st_arrow"/>
+
+                    <ImageView
+                        android:id="@+id/iv_update_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="25.0dip"
+                        android:layout_toLeftOf="@+id/st_about_arrow"
+                        android:contentDescription="@null"
+                        android:src="@drawable/bg_new_version"/>
+                </RelativeLayout>
+
+                <ImageView
+                    style="@style/setting_divider_style"
+                    android:contentDescription="@null"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <com.dw.bcamera.share.SharePage_
+        android:id="@+id/st_sharepage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+</merge>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_01" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_02" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_03" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_04" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_05" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_06" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_07" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_08" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_09" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_10" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_11" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_12" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_13" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_14" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_15" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_16" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_17" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_18" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_19" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_20" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_21" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_22" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_23" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_24" />
+    <item android:duration="100" android:drawable="@drawable/onekey_beauty_25" />
+</animation-list>

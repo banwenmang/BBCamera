@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent">
+
+    <View
+        android:id="@+id/share_back"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/half_transparent"/>
+
+    <LinearLayout
+        android:id="@+id/share_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/st_bkg"
+        android:orientation="horizontal"
+        android:paddingBottom="15.0dip"
+        android:paddingTop="15.0dip">
+
+        <com.dw.bcamera.share.ShareItem_
+            android:id="@+id/share_wechat"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"/>
+
+        <com.dw.bcamera.share.ShareItem_
+            android:id="@+id/share_wechat_timeline"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"/>
+
+        <com.dw.bcamera.share.ShareItem_
+            android:id="@+id/share_qq"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"/>
+
+        <com.dw.bcamera.share.ShareItem_
+            android:id="@+id/share_sina"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"/>
+    </LinearLayout>
+</merge>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/bao_bcamera_title_bar"/>
+
+    <ImageView
+        android:id="@+id/iv_icon_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100.0dip"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/tv_current_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_icon_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30.0dip"
+        android:textColor="@color/setting_about_version"
+        android:textSize="17.0sp"/>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20.0dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_disclaimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:singleLine="true"
+            android:text="@string/str_title_bar_title_disclaimer1"
+            android:textColor="#ff81757c"
+            android:textSize="14.0sp"/>
+
+        <TextView
+            android:id="@+id/copyRight"
+            style="@style/textview_about"
+            android:layout_marginTop="8.0dip"
+            android:text="@string/str_about_copyright"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/tv_current_version"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/setting_divider_style"
+            android:layout_marginTop="25.0dip"
+            android:contentDescription="@string/app_name"/>
+
+        <RelativeLayout
+            android:id="@+id/view_update"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_update"
+                style="@style/setting_item_text"
+                android:layout_alignParentLeft="true"
+                android:paddingBottom="11.0dip"
+                android:paddingTop="11.0dip"
+                android:text="@string/str_settings_update"/>
+
+            <ImageView
+                android:id="@+id/st_recommend_arrow"
+                style="@style/setting_item_arrow"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@null"
+                android:src="@drawable/st_arrow"/>
+
+            <ImageView
+                android:id="@+id/iv_update_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25.0dip"
+                android:layout_toLeftOf="@+id/st_recommend_arrow"
+                android:contentDescription="@null"
+                android:src="@drawable/bg_new_version"/>
+        </RelativeLayout>
+
+        <ImageView
+            style="@style/setting_divider_style"
+            android:contentDescription="@string/app_name"/>
+    </LinearLayout>
+</RelativeLayout>

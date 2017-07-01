@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/beauty_divider_color">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/bao_bcamera_title_bar"/>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/beauty_divider_color"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent">
+
+            <com.dw.bcamera.widget.HorizontalListView
+                android:id="@+id/hlv_sticker_subject"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:scrollbars="none"/>
+
+            <com.dw.bcamera.widget.HorizontalListView
+                android:id="@+id/hlv_sticker_daily"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:scrollbars="none"/>
+
+            <com.dw.bcamera.widget.HorizontalListView
+                android:id="@+id/hlv_sticker_deco"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:scrollbars="none"/>
+
+            <com.dw.bcamera.widget.HorizontalListView
+                android:id="@+id/hlv_sticker_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:scrollbars="none"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/effect_tab_bg">
+
+            <include
+                android:id="@+id/ll_bottom_btn"
+                layout="@layout/sticker_bottom_btn_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_below="@+id/title_bar"
+        android:background="@color/beauty_divider_color"
+        android:orientation="vertical">
+
+        <com.dw.bcamera.widget.HorizontalListView
+            android:id="@+id/hlv_thumbs"
+            android:layout_width="fill_parent"
+            android:layout_height="60.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:scrollbars="none"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent">
+
+            <com.dw.bcamera.sticker.StickerAddPage
+                android:id="@+id/sticker_add_page"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+                <SurfaceView
+                    android:id="@+id/renderView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"/>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitCenter"/>
+            </com.dw.bcamera.sticker.StickerAddPage>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loadAnimView"
+        layout="@layout/photo_edit_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

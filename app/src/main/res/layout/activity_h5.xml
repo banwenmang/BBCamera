@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/bcamera_title_bar"/>
+
+    <com.dw.bcamera.widget.WebViewEx
+        android:id="@+id/h5page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title_bar"
+        android:contentDescription="h5page_cd"/>
+
+    <TextView
+        android:id="@+id/bottomText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#99000000"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/download_qbb6_tips"
+        android:textColor="@color/white"/>
+</RelativeLayout>

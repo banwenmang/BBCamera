@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:padding="5.0dip">
+
+    <ImageView
+        android:id="@+id/crop_ratio_item_img"
+        android:layout_width="60.0dip"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/photo_edit_crop_ratio_free"/>
+
+    <TextView
+        android:id="@+id/crop_ratio_item_txt"
+        style="@style/photo_edit_crop_ratio_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/crop_ratio_item_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10.0dip"
+        android:textColor="@color/photo_edit_ratio_txt_color"/>
+</merge>

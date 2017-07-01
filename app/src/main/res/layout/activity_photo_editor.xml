@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/renderView"
+        android:layout_width="600.0px"
+        android:layout_height="800.0px"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/black"
+        android:contentDescription="@string/app_name"/>
+
+    <Button
+        android:id="@+id/rotate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/renderView"
+        android:onClick="rotate"
+        android:text="ROTATE"/>
+
+    <Button
+        android:id="@+id/flip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rotate"
+        android:onClick="flip"
+        android:text="FLIP"/>
+
+    <Button
+        android:id="@+id/crop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flip"
+        android:onClick="crop"
+        android:text="CROP"/>
+
+    <Button
+        android:id="@+id/hue_saturation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/crop"
+        android:onClick="hueSaturation"
+        android:text="HUE_SATURATION"/>
+
+    <Button
+        android:id="@+id/enhance"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hue_saturation"
+        android:onClick="enhance"
+        android:text="ENHANCE"/>
+
+    <Button
+        android:id="@+id/beauty"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enhance"
+        android:onClick="beauty"
+        android:text="BEAUTY"/>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/beauty"
+        android:onClick="save"
+        android:text="SAVE"/>
+</RelativeLayout>

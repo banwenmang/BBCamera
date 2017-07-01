@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <include
+        android:id="@+id/title_bar_heart"
+        layout="@layout/bao_bcamera_title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title_bar_heart"
+        android:background="@drawable/bg_heart_edit">
+
+        <TextView
+            android:id="@+id/tv_title_heart"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/text_color_heart_title"/>
+
+        <TextView
+            android:id="@+id/tv_limit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_limit_tv"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title_heart">
+
+            <EditText
+                android:id="@+id/et_heart"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_edit_heart"
+                android:gravity="center|left|top"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/iv_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/iv_clear"/>
+        </RelativeLayout>
+
+        <com.dw.bcamera.widget.TabPageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_edit"
+            android:background="@color/transparent"
+            android:fadingEdge="none"/>
+
+        <ImageView
+            android:id="@+id/iv_divider_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_below="@+id/indicator"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@color/bg_edit_heart"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/iv_divider_line"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:id="@+id/choose_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/sticker_choose_page_bkg"
+            android:visibility="gone">
+
+            <com.dw.bcamera.sticker.StickerChooseTop
+                android:id="@+id/sticker_choose_page_top_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:visibility="gone"/>
+
+            <com.dw.bcamera.sticker.StickerChooseMedium
+                android:id="@+id/sticker_choose_page_introduction"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sticker_choose_page_top_bar"
+                android:background="@color/sticker_choose_medium_title_bkg"
+                android:visibility="gone"/>
+
+            <GridView
+                android:id="@+id/sticker_choose_page_grid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sticker_choose_page_introduction"
+                android:columnWidth="@dimen/column_width"
+                android:gravity="center"
+                android:horizontalSpacing="@dimen/horizontal_spacing"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/vertical_spacing"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edit_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <include
+                android:id="@+id/sticker_add_top_title"
+                layout="@layout/bcamera_title_bar"/>
+
+            <com.dw.bcamera.widget.HorizontalListView
+                android:id="@+id/sticker_page_listview"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/sticker_bottom_listview_height"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"/>
+
+            <RelativeLayout
+                android:id="@+id/sticker_add_page"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/sticker_page_listview"
+                android:layout_below="@+id/sticker_add_top_title">
+
+                <SurfaceView
+                    android:id="@+id/renderView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</merge>

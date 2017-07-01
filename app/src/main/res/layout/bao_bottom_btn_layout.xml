@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/effect_tab_bg"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/layout_beauty_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <Button
+            android:id="@+id/btn_beauty"
+            style="@style/bao_photo_effect_bottom_tab_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="@string/str_beauty"/>
+
+        <ImageView
+            android:id="@+id/line_beauty_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="3.0dip"
+            android:layout_alignLeft="@+id/btn_beauty"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/btn_beauty"
+            android:contentDescription="@null"
+            android:src="@drawable/photo_effect_tab_btn_line"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_filter_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <Button
+            android:id="@+id/btn_filter"
+            style="@style/bao_photo_effect_bottom_tab_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="@string/str_photo_edit_filter"/>
+
+        <ImageView
+            android:id="@+id/line_filter_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="3.0dip"
+            android:layout_alignLeft="@+id/btn_filter"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/btn_filter"
+            android:contentDescription="@null"
+            android:src="@drawable/photo_effect_tab_btn_line"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_heart_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <Button
+            android:id="@+id/btn_heart"
+            style="@style/bao_photo_effect_bottom_tab_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="@string/str_photo_edit_heart"/>
+
+        <ImageView
+            android:id="@+id/line_heart_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="3.0dip"
+            android:layout_alignLeft="@+id/btn_heart"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/btn_heart"
+            android:contentDescription="@null"
+            android:src="@drawable/photo_effect_tab_btn_line"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_frame_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <Button
+            android:id="@+id/btn_frame"
+            style="@style/bao_photo_effect_bottom_tab_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="@string/str_frame"/>
+
+        <ImageView
+            android:id="@+id/line_frame_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="3.0dip"
+            android:layout_alignLeft="@+id/btn_frame"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/btn_frame"
+            android:contentDescription="@null"
+            android:src="@drawable/photo_effect_tab_btn_line"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_edit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <Button
+            android:id="@+id/btn_edit"
+            style="@style/bao_photo_effect_bottom_tab_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="@string/edit"/>
+
+        <ImageView
+            android:id="@+id/line_edit_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="3.0dip"
+            android:layout_alignLeft="@+id/btn_edit"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/btn_edit"
+            android:contentDescription="@null"
+            android:src="@drawable/photo_effect_tab_btn_line"/>
+    </RelativeLayout>
+</LinearLayout>

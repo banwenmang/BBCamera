@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/edit_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <include
+            android:id="@+id/sticker_add_top_title"
+            layout="@layout/bcamera_title_bar"/>
+
+        <com.dw.bcamera.widget.HorizontalListView
+            android:id="@+id/sticker_page_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sticker_bottom_listview_height"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/sticker_page_listview"
+            android:layout_below="@+id/sticker_add_top_title"
+            android:orientation="vertical">
+
+            <com.dw.bcamera.widget.HorizontalListView
+                android:id="@+id/hlv_thumbs"
+                android:layout_width="fill_parent"
+                android:layout_height="60.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:scrollbars="none"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <com.dw.bcamera.sticker.StickerAddPage
+                    android:id="@+id/sticker_add_page"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center">
+
+                    <SurfaceView
+                        android:id="@+id/renderView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_centerInParent="true"/>
+
+                    <com.dw.bcamera.sticker.DisplayImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_centerInParent="true"
+                        android:contentDescription=""
+                        android:scaleType="fitCenter"/>
+                </com.dw.bcamera.sticker.StickerAddPage>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/choose_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/sticker_choose_page_bkg"
+        android:visibility="gone">
+
+        <com.dw.bcamera.sticker.StickerChooseTop
+            android:id="@+id/sticker_choose_page_top_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/sticker_choose_top_bkg"/>
+
+        <com.dw.bcamera.sticker.StickerChooseMedium
+            android:id="@+id/sticker_choose_page_introduction"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sticker_choose_page_top_bar"
+            android:background="@color/sticker_choose_middle_bkg"/>
+
+        <GridView
+            android:id="@+id/sticker_choose_page_grid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sticker_choose_page_introduction"
+            android:columnWidth="@dimen/column_width"
+            android:gravity="center"
+            android:horizontalSpacing="@dimen/horizontal_spacing"
+            android:listSelector="@drawable/item_selector"
+            android:numColumns="4"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/vertical_spacing"/>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/loadAnimView"
+        layout="@layout/photo_edit_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

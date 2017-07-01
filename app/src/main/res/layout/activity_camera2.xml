@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/camera_main"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/cm_bottombar_bkg">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextureView
+            android:id="@+id/svCamera"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+
+        <com.dw.bcamera.camera.CameraGrid
+            android:id="@+id/cameraGrid"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"/>
+
+        <com.dw.bcamera.camera.FocusView
+            android:id="@+id/focusView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <com.dw.bcamera.camera.CameraTopBar_
+            android:id="@+id/cameraTopBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/cm_topbar_bkg"/>
+
+        <com.dw.bcamera.widget.ProgressView
+            android:id="@+id/progressBar"
+            android:layout_width="fill_parent"
+            android:layout_height="10.0dip"
+            android:layout_below="@+id/cameraTopBar"
+            android:visibility="gone"/>
+
+        <com.dw.bcamera.camera.CameraBottomBar_
+            android:id="@+id/cameraBottomBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cm_bottombar_bkg"
+            android:padding="10.0dip"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_photo_thumb"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_photo_thumb_lv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/camera_photo_thumb_bg">
+
+            <com.dw.bcamera.widget.HorizontalListView
+                android:id="@+id/hlv_photos"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:scrollbars="none"/>
+        </RelativeLayout>
+
+        <com.dw.bcamera.widget.RotateTextView
+            android:id="@+id/tv_bottom_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/effect_tab_textcolor"/>
+    </LinearLayout>
+</RelativeLayout>

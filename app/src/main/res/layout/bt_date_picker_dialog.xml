@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:layout_gravity="center_horizontal"
+              android:background="@drawable/bg_btdialog"
+              android:orientation="vertical"
+              android:paddingBottom="10.0dip"
+              android:paddingTop="10.0dip">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15.0dip"
+        android:layout_marginTop="5.0dip"
+        android:gravity="center|left"
+        android:singleLine="true"
+        android:text="@string/str_choose_babyinfo_birthday"
+        android:textColor="@color/bt_dialog_text_color"
+        android:textSize="16.0sp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.dw.bcamera.widget.BTWheelView
+            android:id="@+id/year"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"/>
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/str_year"
+            android:textColor="@color/bt_wheel_text_sel"/>
+
+        <com.dw.bcamera.widget.BTWheelView
+            android:id="@+id/month"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"/>
+
+        <TextView
+            android:id="@+id/tv_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/str_month"
+            android:textColor="@color/bt_wheel_text_sel"/>
+
+        <com.dw.bcamera.widget.BTWheelView
+            android:id="@+id/day"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"/>
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/str_day"
+            android:textColor="@color/bt_wheel_text_sel"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip">
+
+        <TextView
+            android:id="@+id/confirm_tv"
+            android:layout_width="64.0dip"
+            android:layout_height="30.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/btn_bt_dialog"
+            android:gravity="center"
+            android:text="@string/str_settings_update_now"
+            android:textColor="@color/bt_dialog_confirm_color"
+            android:textSize="13.0sp"/>
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="64.0dip"
+            android:layout_height="30.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_toLeftOf="@+id/confirm_tv"
+            android:background="@drawable/btn_bt_dialog"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/bt_dialog_cancel_color"
+            android:textSize="13.0sp"/>
+    </RelativeLayout>
+</LinearLayout>

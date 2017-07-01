@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/bao_bcamera_title_bar"/>
+
+    <com.dw.bcamera.widget.WebViewEx
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title_bar"
+        android:background="@color/bg"/>
+
+    <include
+        android:id="@+id/progress"
+        layout="@layout/progress"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignTop="@+id/webview"
+        android:layout_below="@+id/title_bar"
+        android:visibility="gone"/>
+</RelativeLayout>

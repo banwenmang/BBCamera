@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/beauty_divider_color"
+                android:splitMotionEvents="false">
+
+    <SurfaceView
+        android:id="@+id/puzzle_render_view"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/bao_bcamera_title_bar"/>
+
+    <include
+        android:id="@+id/bottom_bar"
+        layout="@layout/puzzle_bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <RelativeLayout
+        android:id="@+id/puzzle_edit_area"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:splitMotionEvents="false">
+
+        <com.dw.bcamera.photopuzzle.PuzzleView
+            android:id="@+id/puzzle_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:splitMotionEvents="false"/>
+
+        <com.dw.bcamera.photopuzzle.PuzzleDecorLayout
+            android:id="@+id/puzzle_decorator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:splitMotionEvents="false"/>
+
+        <com.dw.bcamera.widget.TextContainerLayout
+            android:id="@+id/puzzle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:splitMotionEvents="false"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/puzzle_bling_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/puzzle_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/beauty_divider_color"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"/>
+
+    <RelativeLayout
+        android:id="@+id/puzzle_tool_area"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/puzzle_edit_area"
+        android:layout_alignEnd="@+id/puzzle_edit_area"
+        android:layout_alignLeft="@+id/puzzle_edit_area"
+        android:layout_alignRight="@+id/puzzle_edit_area"
+        android:layout_alignStart="@+id/puzzle_edit_area"
+        android:layout_alignTop="@+id/puzzle_edit_area"
+        android:splitMotionEvents="false">
+
+        <ImageView
+            android:id="@+id/puzzle_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4.0dip"
+            android:layout_marginStart="5.0dip"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_puzzle_change_left"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/puzzle_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4.0dip"
+            android:layout_marginRight="5.0dip"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_puzzle_change_right"
+            android:visibility="invisible"/>
+
+        <include
+            android:id="@+id/puzzle_tool_bar"
+            layout="@layout/puzzle_tool_bar"
+            android:visibility="invisible"/>
+
+        <include
+            android:id="@+id/loadAnimView"
+            layout="@layout/photo_edit_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/puzzle_effect_bar"
+        layout="@layout/puzzle_effect_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_progress_value"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="130.0dip"
+        android:background="@color/transparent">
+
+        <TextView
+            android:id="@+id/progress_value_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_progress_popover"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+</RelativeLayout>

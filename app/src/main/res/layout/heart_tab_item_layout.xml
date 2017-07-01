@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0">
+
+    <Button
+        android:id="@+id/item_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/sticker_text"
+        android:textColor="@color/photo_edit_heart_tab_textcolor"/>
+
+    <ImageView
+        android:id="@+id/item_line"
+        android:layout_width="wrap_content"
+        android:layout_height="3.0dip"
+        android:layout_alignLeft="@+id/item_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/item_btn"
+        android:contentDescription="@null"
+        android:src="@drawable/photo_effect_tab_btn_line"/>
+</RelativeLayout>

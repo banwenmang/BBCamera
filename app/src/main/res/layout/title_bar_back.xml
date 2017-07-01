@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/btn_back"
+          style="@style/title_bar_button_left"
+          android:text="@string/str_title_bar_lbtn_back"/>

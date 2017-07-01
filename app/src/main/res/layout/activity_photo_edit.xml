@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/edit_bg_color">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/bcamera_title_bar"/>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_lovely"
+                style="@style/photo_effect_bottom_tab_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="10.0dip"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip"
+                android:paddingTop="10.0dip"
+                android:text="@string/str_photo_edit_lovely"/>
+
+            <Button
+                android:id="@+id/btn_filter"
+                style="@style/photo_effect_bottom_tab_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toRightOf="@+id/btn_lovely"
+                android:paddingBottom="10.0dip"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip"
+                android:paddingTop="10.0dip"
+                android:text="@string/str_photo_edit_filter"/>
+
+            <ImageView
+                android:id="@+id/iv_edit_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20.0dip"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/photo_effect_crop_btn"/>
+        </RelativeLayout>
+
+        <ImageView
+            style="@style/photoeffect_divider_style"
+            android:layout_marginBottom="10.0dip"
+            android:contentDescription="@string/app_name"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100.0dip">
+
+            <com.dw.bcamera.widget.HorizontalListView
+                android:id="@+id/hlv_filter"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none"
+                android:visibility="gone"/>
+
+            <com.dw.bcamera.widget.HorizontalListView
+                android:id="@+id/hlv_mh"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_below="@+id/title_bar"
+        android:orientation="vertical">
+
+        <com.dw.bcamera.widget.HorizontalListView
+            android:id="@+id/hlv_thumbs"
+            android:layout_width="fill_parent"
+            android:layout_height="60.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:scrollbars="none"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <SurfaceView
+                android:id="@+id/renderView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loadAnimView"
+        layout="@layout/photo_edit_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

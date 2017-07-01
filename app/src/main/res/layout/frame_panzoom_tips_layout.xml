@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/frame_pz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+    <com.dw.bcamera.widget.RoundedImageView
+        android:id="@+id/bkg_round_img"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="cd_bkg_round_img"
+        android:src="#99000000"
+        app:left_bottom_corner_radius="12.0px"
+        app:left_top_corner_radius="12.0px"
+        app:right_bottom_corner_radius="12.0px"
+        app:right_top_corner_radius="12.0px"/>
+
+    <ImageView
+        android:id="@+id/img_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tips_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_tips"
+        android:layout_centerHorizontal="true"
+        android:text="@string/frame_pan_zoom_tips"
+        android:textColor="@color/white"/>
+</RelativeLayout>

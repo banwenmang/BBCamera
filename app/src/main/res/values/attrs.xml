@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="image" format="reference" />
+    <attr name="image_width" format="dimension" />
+    <attr name="image_height" format="dimension" />
+    <attr name="push_image" format="reference" />
+    <attr name="push_image_width" format="dimension" />
+    <attr name="push_image_height" format="dimension" />
+    <attr name="top" format="dimension" />
+    <attr name="left" format="dimension" />
+    <attr name="centerInParent" format="boolean" />
+    <attr name="spacing" format="dimension" />
+    <attr name="padding" format="dimension" />
+    <attr name="leftPadding" format="dimension" />
+    <attr name="rightPadding" format="dimension" />
+    <attr name="topPadding" format="dimension" />
+    <attr name="bottomPadding" format="dimension" />
+    <attr name="startPadding" format="dimension" />
+    <attr name="endPadding" format="dimension" />
+    <attr name="imageSpacing" format="dimension" />
+    <attr name="gridSize" format="dimension" />
+    <attr name="lineGrid" format="integer" min="0">
+        <enum name="auto_fit" value="-1" />
+    </attr>
+    <attr name="scrollOrientation">
+        <flag name="horizontal" value="0x00000000" />
+        <flag name="vertical" value="0x00000001" />
+    </attr>
+    <attr name="aspect" format="string" />
+    <attr name="photoMaxWidth" format="dimension" />
+    <attr name="photoMaxHeight" format="dimension" />
+    <attr name="photoColumn" format="integer" />
+    <attr name="paddingLeft" format="dimension" />
+    <attr name="paddingRight" format="dimension" />
+    <attr name="paddingTop" format="dimension" />
+    <attr name="paddingBottom" format="dimension" />
+    <attr name="photoSpace" format="dimension" />
+    <attr name="singlePhoto" format="boolean" />
+    <attr name="maxSinglePhotoHeight" format="dimension" />
+    <attr name="minSinglePhotoHeight" format="dimension" />
+    <attr name="vpiTabPageIndicatorStyle" format="reference" />
+    <attr name="left_top_corner_radius" format="dimension" />
+    <attr name="right_top_corner_radius" format="dimension" />
+    <attr name="left_bottom_corner_radius" format="dimension" />
+    <attr name="right_bottom_corner_radius" format="dimension" />
+    <attr name="border_width" format="dimension" />
+    <attr name="border_color" format="color" />
+    <attr name="oval" format="boolean" />
+    <attr name="roundColor" format="color" />
+    <attr name="roundProgressColor" format="color" />
+    <attr name="roundWidth" format="dimension" />
+    <attr name="textColor" format="color" />
+    <attr name="textSize" format="dimension" />
+    <attr name="max" format="integer" />
+    <attr name="textIsDisplayable" format="boolean" />
+    <attr name="style">
+        <enum name="STROKE" value="0" />
+        <enum name="FILL" value="1" />
+    </attr>
+</resources>

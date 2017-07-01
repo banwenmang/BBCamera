@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:background="#ff333333">
+
+    <com.dw.bcamera.camera.CaptureSwitch_
+        android:id="@+id/bottom_switch_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/bottom_switch_button">
+
+        <RelativeLayout
+            android:id="@+id/bottomCenterIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <com.dw.bcamera.widget.RotateImageView
+                android:id="@+id/bottomCenterRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/cm_record"
+                android:visibility="visible"/>
+
+            <com.dw.bcamera.widget.RotateImageView
+                android:id="@+id/bottomCenterFrame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/cm_capture_frame"
+                android:visibility="visible"/>
+
+            <com.dw.bcamera.widget.RotateImageView
+                android:id="@+id/bottomCenterCapture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/cm_capture"
+                android:visibility="visible"/>
+        </RelativeLayout>
+
+        <com.dw.bcamera.widget.RotateImageView
+            android:id="@+id/bottomLeftIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/bottomCenterIndicator"
+            android:src="@drawable/cm_pre_remove"
+            android:visibility="gone"/>
+
+        <com.dw.bcamera.widget.RotateImageView
+            android:id="@+id/bottomRightIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/bottomCenterIndicator"
+            android:src="@drawable/cm_confirm"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</merge>

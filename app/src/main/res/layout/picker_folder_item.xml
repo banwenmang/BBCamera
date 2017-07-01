@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:paddingBottom="5.0dip"
+              android:paddingLeft="@dimen/padding_left"
+              android:paddingRight="@dimen/padding_right"
+              android:paddingTop="5.0dip">
+
+    <com.dw.bcamera.mediapicker.MediaPickerItem
+        android:id="@+id/thumbnail"
+        android:layout_width="@dimen/picker_thumbnail_w"
+        android:layout_height="@dimen/picker_thumbnail_h"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:textColor="#ff000000"
+        android:textSize="14.0sp"/>
+</LinearLayout>

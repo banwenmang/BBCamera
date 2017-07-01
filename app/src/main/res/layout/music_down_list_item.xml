@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/line_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12.0dip"
+        android:gravity="center_vertical"
+        android:textColor="@color/textcolor_hor_list_item"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12.0dip"
+        android:layout_toRightOf="@+id/line_number"
+        android:textColor="@color/titlebar_text_color"
+        android:textSize="15.0sp"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <ProgressBar
+            android:id="@+id/download_pb"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:max="100"
+            android:progressDrawable="@drawable/mv_music_download_progress"/>
+
+        <TextView
+            android:id="@+id/download_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_music_download_corner"
+            android:gravity="center"
+            android:text="0%"
+            android:textColor="@color/textcolor_music_download_progress"/>
+    </RelativeLayout>
+</RelativeLayout>

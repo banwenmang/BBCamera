@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:background="@drawable/bg_picker_bottombar"
+                android:visibility="gone">
+
+    <TextView
+        android:id="@+id/selected_photo_preview"
+        style="@style/textview_selected_photo_preview"/>
+
+    <TextView
+        android:id="@+id/selected_photo_ok"
+        style="@style/textview_select_photo_ok"/>
+</RelativeLayout>

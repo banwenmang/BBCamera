@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling0" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling1" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling2" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling3" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling4" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling5" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling6" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling7" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling8" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling9" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling10" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling11" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling12" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling13" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling14" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling15" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling16" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling17" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling18" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling19" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling20" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling21" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling22" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling23" />
+    <item android:duration="40" android:drawable="@drawable/photo_effect_bling24" />
+</animation-list>

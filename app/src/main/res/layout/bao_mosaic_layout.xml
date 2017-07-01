@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/layout_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_mosaic_thin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_mosaic_thin"
+                android:textColor="@color/textcolor_hor_list_item"/>
+
+            <RelativeLayout
+                android:id="@+id/layout_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_mosaic_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:src="@color/mosaic_line_color"/>
+
+                <ImageView
+                    android:id="@+id/iv_circle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/mosaic_circle_size_small"/>
+
+                <ImageView
+                    android:id="@+id/iv_circle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/mosaic_circle_size_medium"/>
+
+                <ImageView
+                    android:id="@+id/iv_circle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/mosaic_circle_size_large"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_mosaic_thick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_mosaic_thick"
+                android:textColor="@color/textcolor_hor_list_item"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/layout_left"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_eraser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5.0dip"
+                android:drawableTop="@drawable/mosaic_eraser_draw"
+                android:gravity="center_horizontal"
+                android:text="@string/str_eraser"
+                android:textColor="@color/mosaic_textcolor"/>
+
+            <TextView
+                android:id="@+id/tv_pen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5.0dip"
+                android:drawableTop="@drawable/mosaic_pen_draw"
+                android:gravity="center_horizontal"
+                android:text="@string/str_paint"
+                android:textColor="@color/mosaic_textcolor"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/bao_bcamera_title_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/media_picker_puzzle_list_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/media_picker_puzzle_list_bg"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/tip_infos"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/select_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginStart="10.0dip"
+                android:text="@string/str_media_picker_select_tip"
+                android:textColor="@color/white"
+                android:textSize="14.0sp"/>
+
+            <TextView
+                android:id="@+id/selected_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/select_tip"
+                android:layout_toRightOf="@+id/select_tip"
+                android:text="@string/str_media_picker_selected_tip"
+                android:textColor="@color/white"
+                android:textSize="14.0sp"/>
+
+            <Button
+                android:id="@+id/select_ok"
+                android:layout_width="65.0dip"
+                android:layout_height="28.0dip"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:background="@drawable/bg_media_picker_selected_ok"
+                android:onClick="clickSelectOk"
+                android:text="@string/str_media_picker_select_ok"
+                android:textColor="#c8000000"
+                android:textSize="14.0sp"/>
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/selected_thumbs_scrolle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/tip_infos"
+            android:layout_marginBottom="6.0dip"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/selected_thumbs"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="4.0dip"
+                android:paddingStart="4.0dip"/>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_below="@+id/title_bar">
+
+        <include
+            android:id="@+id/folder_list"
+            layout="@layout/picker_folder"
+            android:visibility="visible"/>
+
+        <include
+            android:id="@+id/gallery"
+            layout="@layout/picker_gallery"
+            android:visibility="gone"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/largre_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/bg"
+            android:visibility="invisible"/>
+
+        <RelativeLayout
+            android:id="@+id/no_images"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/beauty_divider_color"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/no_pictures_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_no_images"/>
+
+            <TextView
+                android:id="@+id/no_pictures_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/no_pictures_image"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="@string/no_images"
+                android:textColor="@color/mediapicker_no_image_textcolor"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/add_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15.0dip"
+        android:layout_marginEnd="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_mediao_picker_add"
+        android:visibility="gone"/>
+</RelativeLayout>

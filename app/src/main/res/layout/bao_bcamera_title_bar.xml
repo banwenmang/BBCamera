@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dw.bcamera.widget.TitleBar xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/title_bar_height"
+                                android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title_bar_title"
+        android:layout_width="172.0dip"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/titlebar_text_color"
+        android:textSize="18.0sp"/>
+
+    <LinearLayout
+        android:id="@+id/title_bar_left"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8.0dip"
+        android:gravity="center|left"
+        android:orientation="horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/title_bar_right"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="8.0dip"
+        android:gravity="center|right"
+        android:orientation="horizontal"/>
+</com.dw.bcamera.widget.TitleBar>

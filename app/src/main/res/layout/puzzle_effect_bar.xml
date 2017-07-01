@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/puzzle_effect_bar_top"
+        android:paddingLeft="11.0dip"
+        android:paddingStart="11.0dip">
+
+        <LinearLayout
+            android:id="@+id/effect_down"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="11.0dip"
+                android:layout_marginRight="11.0dip"
+                android:background="@drawable/bg_puzzle_effect_bar_down"
+                android:contentDescription="@null"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/effect_progress_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="18.0dip"
+            android:layout_marginRight="18.0dip"
+            android:layout_toLeftOf="@+id/effect_down"
+            android:layout_toStartOf="@+id/effect_down"
+            android:gravity="center"
+            android:textSize="14.0sp"/>
+
+        <TextView
+            android:id="@+id/effect_progress_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textSize="14.0sp"/>
+
+        <SeekBar
+            android:id="@+id/effect_progress_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginStart="10.0dip"
+            android:layout_toEndOf="@+id/effect_progress_min"
+            android:layout_toLeftOf="@+id/effect_progress_max"
+            android:layout_toRightOf="@+id/effect_progress_min"
+            android:layout_toStartOf="@+id/effect_progress_max"
+            android:indeterminate="false"
+            android:maxHeight="2.0dip"
+            android:minHeight="2.0dip"
+            android:paddingLeft="@dimen/puzzle_effect_bar_padding"
+            android:paddingRight="@dimen/puzzle_effect_bar_padding"
+            android:progressDrawable="@drawable/photo_edit_seekbar_progress1"
+            android:thumb="@drawable/ic_seekbar_thumb"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/puzzle_effect_bar_bottom"
+        android:layout_marginBottom="5.0dip">
+
+        <com.dw.bcamera.widget.HorizontalListView
+            android:id="@+id/puzzle_effect_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scrollbars="none"/>
+    </RelativeLayout>
+</LinearLayout>

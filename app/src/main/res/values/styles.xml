@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="notitle">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="AppBaseTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen" />
+    <style name="AppTheme" parent="@style/AppBaseTheme" />
+    <style name="cm_effect_item_text">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="st_topbar_title">
+        <item name="android:textSize">25.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="setting_divider_style">
+        <item name="android:background">@color/setting_tv_bg_normal_color</item>
+        <item name="android:focusable">false</item>
+        <item name="android:clickable">false</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/setting_divider_height</item>
+        <item name="android:src">@color/setting_divider_color</item>
+    </style>
+    <style name="photoeffect_divider_style">
+        <item name="android:focusable">false</item>
+        <item name="android:clickable">false</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/setting_divider_height</item>
+        <item name="android:src">@color/photoeffect_divider_color</item>
+    </style>
+    <style name="setting_divider_style_with_padding" parent="@style/setting_divider_style">
+        <item name="android:paddingLeft">15.0dip</item>
+    </style>
+    <style name="setting_item_arrow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">15.0dip</item>
+        <item name="android:src">@drawable/st_arrow</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="setting_item_text">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">@color/setting_item_text_color</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="share_item_text">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textColor">@color/setting_item_text_color</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="title_bar_button_left">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_titlebar_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">5.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawableLeft">@drawable/ic_titlebar_back_w</item>
+        <item name="android:drawablePadding">4.0dip</item>
+    </style>
+    <style name="title_bar_button_left_bao">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/titlebar_textcolor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_titlebar_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">5.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawableLeft">@drawable/ic_titlebar_back</item>
+        <item name="android:drawablePadding">4.0dip</item>
+    </style>
+    <style name="title_bar_button_left_cancel">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/titlebar_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_titlebar_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">5.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawableLeft">@drawable/ic_titlebar_cancel_b</item>
+        <item name="android:drawablePadding">4.0dip</item>
+    </style>
+    <style name="title_bar_button_right_confirm">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/titlebar_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_titlebar_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginRight">5.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawableRight">@drawable/ic_titlebar_ok_b</item>
+        <item name="android:drawablePadding">4.0dip</item>
+    </style>
+    <style name="title_bar_image_button">
+        <item name="android:layout_width">48.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+    <style name="textview_selected_photo_preview">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#ff5e5343</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_picker_preview</item>
+        <item name="android:layout_width">92.0dip</item>
+        <item name="android:layout_height">32.0dip</item>
+        <item name="android:layout_marginLeft">12.0dip</item>
+        <item name="android:text">@string/select_photo_preview</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="textview_select_photo_ok">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_picker_ok</item>
+        <item name="android:layout_width">92.0dip</item>
+        <item name="android:layout_height">32.0dip</item>
+        <item name="android:layout_marginRight">12.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="title_bar_button_right">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_titlebar_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">5.0dip</item>
+        <item name="android:layout_marginRight">5.0dip</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="title_bar_button_right_home">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/titlebar_textcolor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">5.0dip</item>
+        <item name="android:layout_marginRight">5.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawableRight">@drawable/ic_titlebar_home_b</item>
+        <item name="android:drawablePadding">4.0dip</item>
+    </style>
+    <style name="title_bar_button_save">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/titlebar_textcolor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_titlebar_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">5.0dip</item>
+        <item name="android:layout_marginRight">5.0dip</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="title_bar_button_right_bao">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/titlebar_textcolor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_titlebar_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">5.0dip</item>
+        <item name="android:layout_marginRight">5.0dip</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="photo_edit_bottom_bar_text">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/photo_edit_bottom_text</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="photo_effect_bottom_tab_text">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/photo_edit_bottom_text</item>
+        <item name="android:background">@drawable/photo_edit_bottom_tab_bg</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="bao_photo_effect_bottom_tab_text">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/bao_photo_edit_bottom_text</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="music_tab_text">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/music_select_tab_text</item>
+        <item name="android:background">@drawable/photo_edit_bottom_tab_bg</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="photo_edit_crop_ratio_item_text">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">@color/photo_edit_crop_ratio_text</item>
+    </style>
+    <style name="bcamera_theme_main" parent="@android:style/Theme.NoTitleBar.Fullscreen" />
+    <style name="input_common_style">
+        <item name="android:textColor">@color/setting_item_text_color</item>
+        <item name="android:textColorHint">@color/edittext_hint_color</item>
+        <item name="android:background">@color/setting_tv_bg_normal_color</item>
+    </style>
+    <style name="textview_alert_notify_tip">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/tip_info_color</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">15.0dip</item>
+        <item name="android:layout_marginTop">8.0dip</item>
+        <item name="android:layout_marginRight">5.0dip</item>
+    </style>
+    <style name="textview_about">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">#ffa29f9a</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="updateDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:background">@null</item>
+    </style>
+</resources>

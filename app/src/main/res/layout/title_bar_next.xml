@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:id="@+id/btn_next" android:text="@string/str_title_bar_rbtn_next" style="@style/title_bar_button_right"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

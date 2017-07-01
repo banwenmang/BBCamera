@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <ListView
+        android:id="@+id/lv_heart_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/divider_heart_listitem"
+        android:dividerHeight="@dimen/beauty_divider_width"
+        android:fadingEdge="none"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"/>
+
+    <TextView
+        android:id="@+id/tv_mine_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/str_heart_mine_empty"
+        android:textColor="@color/text_color_heart_title"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_reload"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_heart_reload"/>
+
+        <TextView
+            android:id="@+id/tv_net_unavailable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_reload"
+            android:layout_centerHorizontal="true"
+            android:text="@string/str_network_unavail"/>
+
+        <TextView
+            android:id="@+id/tv_click_blank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_net_unavailable"
+            android:layout_centerHorizontal="true"
+            android:text="@string/str_click_blank"/>
+    </RelativeLayout>
+</RelativeLayout>

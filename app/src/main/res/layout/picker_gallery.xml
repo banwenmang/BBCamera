@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dw.bcamera.mediapicker.ImageGallery xmlns:android="http://schemas.android.com/apk/res/android"
+                                         android:layout_width="fill_parent"
+                                         android:layout_height="fill_parent"
+                                         android:orientation="vertical">
+
+    <view xmlns:bt="http://schemas.android.com/apk/res-auto"
+          android:id="@+id/grid"
+          class="com.dw.bcamera.mediapicker.GridViewSpecial"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:focusable="true"
+          android:scrollbars="vertical"
+          bt:endPadding="3.0dip"
+          bt:gridSize="@dimen/picker_thumbnail_h"
+          bt:imageSpacing="2.0dip"
+          bt:lineGrid="3"
+          bt:scrollOrientation="vertical"
+          bt:startPadding="2.0dip"/>
+</com.dw.bcamera.mediapicker.ImageGallery>

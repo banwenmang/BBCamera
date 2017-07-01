@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="15" android:drawable="@drawable/cm_start_record01" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record02" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record03" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record04" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record05" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record06" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record07" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record08" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record09" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record10" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record11" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record12" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record13" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record14" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record15" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record16" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record17" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record18" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record19" />
+    <item android:duration="15" android:drawable="@drawable/cm_start_record20" />
+</animation-list>

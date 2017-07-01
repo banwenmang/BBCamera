@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_puzzle_tool_bar"
+                android:gravity="center_vertical"
+                android:paddingLeft="5.0dip"
+                android:paddingRight="5.0dip">
+
+    <LinearLayout
+        android:id="@+id/tool_auto_beauty"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/puzzle_tool_margin2"
+            android:layout_marginRight="@dimen/puzzle_tool_margin2"
+            android:layout_marginStart="@dimen/puzzle_tool_margin2"
+            android:background="@drawable/bg_puzzle_tool_bar_beauty"
+            android:contentDescription="@null"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tool_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_toEndOf="@+id/tool_auto_beauty"
+        android:layout_toRightOf="@+id/tool_auto_beauty"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/puzzle_tool_margin"
+            android:layout_marginRight="@dimen/puzzle_tool_margin"
+            android:layout_marginStart="@dimen/puzzle_tool_margin"
+            android:background="@drawable/bg_puzzle_tool_bar_filter"
+            android:contentDescription="@null"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tool_rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_toEndOf="@+id/tool_effect"
+        android:layout_toRightOf="@+id/tool_effect"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/puzzle_tool_margin"
+            android:layout_marginRight="@dimen/puzzle_tool_margin"
+            android:layout_marginStart="@dimen/puzzle_tool_margin"
+            android:background="@drawable/bg_puzzle_tool_bar_rotate"
+            android:contentDescription="@null"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tool_change_file"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_toEndOf="@+id/tool_rotate"
+        android:layout_toRightOf="@+id/tool_rotate"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/puzzle_tool_margin"
+            android:layout_marginRight="@dimen/puzzle_tool_margin"
+            android:layout_marginStart="@dimen/puzzle_tool_margin"
+            android:background="@drawable/bg_puzzle_tool_bar_chage_photo"
+            android:contentDescription="@null"/>
+    </LinearLayout>
+</RelativeLayout>

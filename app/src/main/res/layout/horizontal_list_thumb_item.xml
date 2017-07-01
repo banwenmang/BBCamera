@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/thumb_list_item"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/titlebar_text_color"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_filter_none"/>
+
+    <ImageView
+        android:id="@+id/ic_delete"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/textcolor_music_download_progress"
+        android:contentDescription="@null"
+        android:scaleType="center"
+        android:src="@drawable/ic_camera_delete1"
+        android:visibility="gone"/>
+</RelativeLayout>

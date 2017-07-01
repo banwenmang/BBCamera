@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/stickerLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+    <View
+        android:id="@+id/stickerBg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/sticker_border"/>
+
+    <RelativeLayout
+        android:id="@+id/displayLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/iv_tag"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"/>
+
+        <com.dw.bcamera.sticker.AutoResizeTextView
+            android:id="@+id/resizeText"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent"
+            android:text="@string/sticker_input_text"
+            android:textColor="@android:color/black"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/zoom_cover"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:contentDescription="@null"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/loadingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:padding="4.0dip"
+            android:src="@drawable/sticker_item_downloading"/>
+
+        <ImageView
+            android:id="@+id/loadingFrames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loadingTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5.0dip"
+            android:contentDescription="@null"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_delete_tag"
+        android:layout_width="@dimen/sticker_ctrl_size"
+        android:layout_height="@dimen/sticker_ctrl_size"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/transparent"
+        android:contentDescription="@null"
+        android:src="@drawable/ed_delete_tag"/>
+
+    <ImageView
+        android:id="@+id/iv_flip_tag_hori"
+        android:layout_width="@dimen/sticker_ctrl_size"
+        android:layout_height="@dimen/sticker_ctrl_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/transparent"
+        android:contentDescription="@null"
+        android:src="@drawable/ed_flip_hori"/>
+
+    <ImageView
+        android:id="@+id/iv_flip_tag_vert"
+        android:layout_width="@dimen/sticker_ctrl_size"
+        android:layout_height="@dimen/sticker_ctrl_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/transparent"
+        android:contentDescription="@null"
+        android:src="@drawable/ed_flip_vert"/>
+
+    <ImageView
+        android:id="@+id/iv_zoom_tag"
+        android:layout_width="@dimen/sticker_ctrl_size"
+        android:layout_height="@dimen/sticker_ctrl_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/transparent"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:src="@drawable/ed_zoom_tag"/>
+</RelativeLayout>

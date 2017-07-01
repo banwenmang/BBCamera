@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10.0dip">
+
+        <TextView
+            android:id="@+id/sticker_add_detail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5.0dip"
+            android:text="取消"
+            android:textSize="18.0sp"/>
+
+        <TextView
+            android:id="@+id/sticker_add_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5.0dip"
+            android:text="综艺字幕(一)"
+            android:textSize="20.0sp"/>
+    </RelativeLayout>
+</merge>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/beauty_divider_color">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/bao_bcamera_title_bar"/>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/beauty_divider_color"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <com.dw.bcamera.widget.HorizontalListView
+                android:id="@+id/hlv_sticker"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:background="@color/transparent"
+                android:fadingEdge="none"
+                android:scrollbars="none"
+                android:visibility="visible"/>
+
+            <RelativeLayout
+                android:id="@+id/ll_sticker_library"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_sticker_library">
+
+                <TextView
+                    android:id="@+id/tv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableTop="@drawable/ic_sticker_library"
+                    android:gravity="center"
+                    android:text="@string/str_sticker_library"
+                    android:textColor="@color/titlebar_text_color"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/effect_tab_bg">
+
+            <HorizontalScrollView
+                android:id="@+id/hsv_bottom_tab"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <include
+                    android:id="@+id/ll_bottom_btn"
+                    layout="@layout/sticker_bottom_btn_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"/>
+            </HorizontalScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/displayContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_below="@+id/title_bar"
+        android:background="@color/beauty_divider_color">
+
+        <com.dw.bcamera.sticker.StickerAddPage
+            android:id="@+id/sticker_add_page"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center">
+
+            <TextureView
+                android:id="@+id/renderView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"/>
+
+            <RelativeLayout
+                android:id="@+id/layout_text_frame"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignBottom="@+id/renderView"
+                android:layout_alignLeft="@+id/renderView"
+                android:layout_alignRight="@+id/renderView"
+                android:layout_alignTop="@+id/renderView"
+                android:layout_centerInParent="true"
+                android:background="#00000000"
+                android:visibility="gone"/>
+        </com.dw.bcamera.sticker.StickerAddPage>
+
+        <include
+            android:id="@+id/loadAnimView"
+            layout="@layout/photo_edit_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_text_tip_cover"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/trim_length_tip_color"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_sticker_text_confirm"/>
+
+        <ImageView
+            android:id="@+id/iv_text_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_confirm"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_sticker_text_tip"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_sticker_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/displayContainer"
+        android:layout_alignLeft="@+id/displayContainer"
+        android:layout_alignRight="@+id/displayContainer"
+        android:layout_alignTop="@+id/displayContainer"
+        android:background="@color/transparent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/sticker_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/transparent"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/moreLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/sticker_more_bg"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/grid_more_title_bar"
+            layout="@layout/grid_more_title_bar"/>
+
+        <GridView
+            android:id="@+id/gridMore"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/grid_more_title_bar"
+            android:gravity="center"
+            android:numColumns="auto_fit"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"/>
+
+        <ListView
+            android:id="@+id/listMore"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/grid_more_title_bar"
+            android:cacheColorHint="#00000000"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none"
+            android:splitMotionEvents="false"/>
+    </RelativeLayout>
+</RelativeLayout>

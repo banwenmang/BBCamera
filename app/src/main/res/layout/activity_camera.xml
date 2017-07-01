@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/camera_main"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent">
+
+    <SurfaceView
+        android:id="@+id/svCamera"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip"/>
+
+    <SurfaceView
+        android:id="@+id/svDisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+    <com.dw.bcamera.widget.sticker.StickerPage_
+        android:id="@+id/stickerPage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent"
+        android:visibility="gone"/>
+
+    <com.dw.bcamera.widget.sticker.TextPage_
+        android:id="@+id/textPage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.dw.bcamera.widget.CameraTopBar_
+            android:id="@+id/cameraTopBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/cm_topbar_bkg"
+            android:padding="15.0dip"/>
+
+        <com.dw.bcamera.widget.ProgressView
+            android:id="@+id/progressBar"
+            android:layout_width="fill_parent"
+            android:layout_height="10.0dip"
+            android:layout_below="@+id/cameraTopBar"/>
+
+        <com.dw.bcamera.widget.CameraBottomBar_
+            android:id="@+id/cameraBottomBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cm_bottombar_bkg"
+            android:padding="18.0dip"/>
+
+        <com.dw.bcamera.widget.HorizontalListView
+            android:id="@+id/effect_list"
+            android:layout_width="fill_parent"
+            android:layout_height="120.0dip"
+            android:layout_above="@+id/cameraBottomBar"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@+id/title_bar" layout="@layout/bao_bcamera_title_bar" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/progress" android:background="@drawable/photo_edit_loading_bg1" android:paddingLeft="10.0dip" android:paddingTop="7.0dip" android:paddingRight="10.0dip" android:paddingBottom="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@+id/progressIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_edit_loading1" android:contentDescription="@string/app_name" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@+id/progress_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/loadinfo" />
+    </LinearLayout>
+</RelativeLayout>
